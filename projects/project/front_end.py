@@ -24,6 +24,9 @@ from category_ui import (
     create_category_row
 )
 
+from data_table import(
+    genertate_dataframe
+)
 def create_gui():
 
     root = tk.Tk()
@@ -205,7 +208,8 @@ def create_gui():
         create_table()
         load_categories()
 
-    
+
+   
     # ------------------------------------------------
     # Buttons
     # ------------------------------------------------
@@ -291,6 +295,18 @@ def create_gui():
     export_button.grid(
             row = 4,
             column = 1,
+            pady = 5
+            )
+
+    table_button = tk.Button(
+                root,
+                text="Show table",
+                command=genertate_dataframe
+            )
+            
+    table_button.grid(
+            row = 4,
+            column = 2,
             pady = 5
             )
 
